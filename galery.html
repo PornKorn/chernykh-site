@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Галерея</title>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/lightgallery.js/dist/js/lightgallery.js"></script>
+	<link rel="stylesheet" href="bower_components/lightgallery.js/dist/css/lightgallery.css">
+
+	<link rel="stylesheet" href="css/gallery-custom.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/pictures-list.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			var pictures = window._picturesList
+
+			var $gallery = $('#lightgallery')
+			for (var url in pictures) {
+				var picture = pictures[url]
+				$gallery.append(
+					$('<a />').attr('href', 'img/' + url).append(
+						$('<img />').attr('src', 'img/' + url)
+					)
+				)
+			}
+			lightGallery($gallery.get(0))
+		})
+	</script>
+</head>
+<body>
+	<header>
+		<div class="headerLogo">
+			<span class="logo-name">Татьяна Черных</span>
+			<span class="logo-description">
+				<span>художник-живописец</span>
+			</span>
+		</div>
+		<div class="headerMenu">
+			<div class="headerButton"><a href="">Главная</a></div>
+			<div class="headerButton"><a href="galery.html">Галерея</a></div>
+			<div class="headerButton"><a href="">Обо мне</a></div>
+		</div>
+	</header>
+	<main>
+		<div id="lightgallery"></div>
+	</main>	
+</body>
+</html>

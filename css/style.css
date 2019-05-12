@@ -1,0 +1,100 @@
+/*хэдер*/
+a {
+	text-decoration: none;
+	outline: none;
+ }
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+    color: black;
+    font-family: 'Radley', serif;
+    margin-bottom: 30px;
+    background-image: url(g19534504312u.jpg);
+} 
+.logo-name {
+  display: flex;
+  font-size: 26px;
+  line-height: 1;
+  font-family: 'Radley', serif;
+  text-transform: uppercase;
+  color: #19121e;
+  margin-left: 30px;
+}
+
+.logo-description {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: 'Radley', serif;
+  color: black;
+  margin-left: 30px;
+}
+
+.logo-description:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #dededc;
+  z-index: -1;
+}
+.logo-description span {
+  padding-left: 4px;
+}
+
+.headerMenu {
+    display: flex;
+	align-items: center;	
+}
+.headerButton {
+	padding: 5px;
+	font-size: 17px;
+	margin-right: 5px;
+}
+
+
+
+
+/*флекс для галереи*/
+
+body {
+	margin: 0;
+	background-color: #dededc;
+}
+
+main {
+	margin: 0.5vw;
+	font-size: 0;
+}
+
+#lightgallery {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	flex-flow: row wrap;
+}
+
+#lightgallery a {
+	flex:auto;
+	width: 200px;
+	margin: .5vw;
+	align-self: center;
+}
+
+#lightgallery a img {
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 400px) {
+	#lightgallery a {
+		margin: 0;
+	}
+	#lightgallery {
+		padding: 0;
+	}
+}
